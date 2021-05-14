@@ -55,6 +55,7 @@ h5 {
 
 body {
   font-family: "Frank Ruhl Libre", serif;
+  animation: opening 1s ease-in-out;
 }
 
 ul {
@@ -138,8 +139,39 @@ nav {
   bottom: 0;
   left: -20%;
   z-index: -1;
+  animation: plant-shake 3s infinite ease alternate-reverse 1s;
+  transform-origin: bottom;
 }
 
 .plant2 {
   left: 40%;
+}
+
+/* Animation */
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes plant-entrance {
+  from {
+    transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+  }
+  to {
+    transform: translateY(0%) rotateZ(0deg) rotateX(0%);
+  }
+}
+
+@keyframes plant-shake {
+  from {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
 }
