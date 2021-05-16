@@ -141,6 +141,7 @@ nav {
   z-index: -1;
   animation: plant-shake 3s infinite ease alternate-reverse 1s;
   transform-origin: bottom;
+  max-height: 80%;
 }
 
 .plant2 {
@@ -166,6 +167,15 @@ nav {
 }
 
 @media screen and (max-width: 842px) {
+  .hero {
+    width: 100%;
+  }
+
+  .hero-introduction p {
+    padding: 5rem 3rem;
+  }
+
+  /* Burger Mobile */
   .burger {
     position: relative;
   }
@@ -174,7 +184,7 @@ nav {
     background: var(--gray-text);
     margin: 0.5rem 0rem;
     display: block;
-    transition: transform 0.5s ease;
+    transition: all 0.5s ease;
   }
   .nav-links a {
     color: white;
